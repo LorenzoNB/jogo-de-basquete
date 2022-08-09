@@ -9,8 +9,8 @@ var angle;
 var score=0;
 var canvas;
 function preload(){
- playerImg=loadImage("jogador.jpg");
- ballImg=loadImage("bola.jpg");
+ playerImg=loadImage("pngegg.png");
+ ballImg=loadImage("bola 2.png");
  fundoImg=loadImage("quadra.jpg");
 
   
@@ -19,7 +19,7 @@ function preload(){
 function setup(){
   canvas=createCanvas(windowWidth,windowHeight);
 
-  
+  ball= new Ball(1000,925);
  
 
 }
@@ -29,8 +29,8 @@ function draw() {
   background(189);
   image(fundoImg,0,0,width,height);
    
-  image(playerImg,40,50,100-width,100-height);
-
+  image(playerImg,1000,925,1600-width,500-height);
+  ball.display();
         drawSprites();
         
 }
